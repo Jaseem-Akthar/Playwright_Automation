@@ -5,7 +5,7 @@ test('test', async ({ page }) => {
 
     const Login = new vLoginPage(page);
     await Login.gotovLoginPage();
-    await Login.login("kumar.shantanu@vesume.net", "password");
+    await Login.login("","");
 
     // await page.goto('https://beta.vesume.net/');
     // await page.getByRole('link', { name: 'Log In' }).click();
@@ -19,4 +19,25 @@ test('test', async ({ page }) => {
     // await page.getByLabel('Password').fill('password');
     // await page.getByRole('button', { name: 'Log In' }).click();
     // await page.close();
+});
+
+test('test1', async ({ page }) => {
+
+    const Login = new vLoginPage(page);
+    await Login.gotovLoginPage();
+    await Login.login("kumar.shantanu","password");
+});
+
+test('test2', async ({ page }) => {
+
+    const Login = new vLoginPage(page);
+    await Login.gotovLoginPage();
+    await Login.login("kumar.shantanu@vesume.net","abdefghi");
+});
+
+test('test3', async ({ page }) => {
+
+    const Login = new vLoginPage(page);
+    await Login.gotovLoginPage();
+    await Login.login("kumar.shantanu@vesume.net", "password");
 });
