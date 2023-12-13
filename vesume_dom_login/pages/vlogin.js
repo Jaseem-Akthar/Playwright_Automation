@@ -10,7 +10,7 @@ exports.vLoginPage = class vLoginPage {
 
     }
 
-    async gotovLoginPage(){
+    async gotovLoginPage() {
         await this.page.goto('https://beta.vesume.net/');
     }
 
@@ -22,7 +22,7 @@ exports.vLoginPage = class vLoginPage {
 
 
 
-    async login(mail,password){
+    async login(mail, password) {
         await this.link_button.click()
         await this.mail_textbox.fill(mail)
         await this.password_textbox.fill(password)

@@ -5,7 +5,7 @@ test('test', async ({ page }) => {
 
     const Login = new vLoginPage(page);
     await Login.gotovLoginPage();
-    await Login.login("","");
+    await Login.login("", "");
 
     // await page.goto('https://beta.vesume.net/');
     // await page.getByRole('link', { name: 'Log In' }).click();
@@ -25,14 +25,14 @@ test('test1', async ({ page }) => {
 
     const Login = new vLoginPage(page);
     await Login.gotovLoginPage();
-    await Login.login("kumar.shantanu","password");
+    await Login.login("kumar.shantanu", "password");
 });
 
 test('test2', async ({ page }) => {
 
     const Login = new vLoginPage(page);
     await Login.gotovLoginPage();
-    await Login.login("kumar.shantanu@vesume.net","abdefghi");
+    await Login.login("kumar.shantanu@vesume.net", "abdefghi");
     const errorMessageIsVisible = await vLoginPage.ErrorMessageVisible();
     expect(errorMessageIsVisible).toBe(true);
 });
