@@ -3,4 +3,3 @@ node_modules/
 /playwright-report/
 /blob-report/
 /playwright/.cache/
-playwright_api_test/playwright_api_test.rar
