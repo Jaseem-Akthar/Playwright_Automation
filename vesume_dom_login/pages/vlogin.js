@@ -6,7 +6,7 @@ exports.vLoginPage = class vLoginPage {
         this.mail_textbox = page.getByLabel('Email')
         this.password_textbox = page.getByLabel('Password')
         this.login_button = page.getByRole('button', { name: 'Log In' })
-
+        this.error_Message = page.locator('Incorrect email or password')
 
     }
 
@@ -14,7 +14,10 @@ exports.vLoginPage = class vLoginPage {
         await this.page.goto('https://beta.vesume.net/');
     }
 
-
+    async ErrorMessageVisible() {
+        const error_Message = this.error_Message;
+        return await error_Message.isVisible();
+    }
 
 
 
@@ -24,7 +27,7 @@ exports.vLoginPage = class vLoginPage {
         await this.mail_textbox.fill(mail)
         await this.password_textbox.fill(password)
         await this.login_button.click()
-
+        await this.error_Message.isVisible()
     }
 
 

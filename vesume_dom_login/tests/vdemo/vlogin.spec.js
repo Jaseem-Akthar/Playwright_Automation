@@ -33,6 +33,8 @@ test('test2', async ({ page }) => {
     const Login = new vLoginPage(page);
     await Login.gotovLoginPage();
     await Login.login("kumar.shantanu@vesume.net","abdefghi");
+    const errorMessageIsVisible = await vLoginPage.ErrorMessageVisible();
+    expect(errorMessageIsVisible).toBe(true);
 });
 
 test('test3', async ({ page }) => {
